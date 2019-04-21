@@ -9,7 +9,9 @@ Library provides two macros:
 ```c++
 std::variant<int, std::string> variant;
 typeswitch (variant) {
-	typecase(int, val):
+	typecase(int, val): std::cout << "I'm holding int of value: " << val << '\n';
+	typecase(std::string, str): 
+		std::cout << "I'm holding std::string of value: " << std::quoted(str) << '\n';
 }
 ```
 
