@@ -2,7 +2,7 @@
 Little library to support access to C++17 type-safe union types - std::variant and std::any. 
 
 Library provides two macros:
-- ```typeswitch([variant|any])``` - analogue to C++ ```switch```
+- ```typeswitch([variant|any])``` - analogue to C++ ```switch```. Break statement works but you should not use it to prevent fallthrough (this library does not support this feature of C++ switch).
 - ```typecase(type, name)``` - If type is holded ```name``` is reference to holded type and code after is executed. Should be followed by single statement or compound statement.
 
 ### Simple example (for more ```example.cc``` file in repository)
